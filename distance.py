@@ -46,8 +46,6 @@ for row in range(0, n):
     city.name = a
     city.state = b
     cities.append(city)
-    #city(row - 1).name = s.cell_value(row, 1)
-    #city(row - 1).state = s.cell_value(row, 0)
 
 def get_distance(orig, dest, flag):
     dist_time = []
@@ -100,8 +98,6 @@ def get_distance(orig, dest, flag):
     return dist_time
 
 loc = "C:/Users/sepeh/Desktop/Major Choice/Distance/Python/dist_python210.xls"
-loc2 = "C:/Users/sepeh/Desktop/Major Choice/Distance/Python/dist_python239.xls"
-loc3 = "C:/Users/sepeh/Desktop/Major Choice/Distance/Python/dist_python268.xls"
 rb = xlrd.open_workbook(loc, formatting_info=True)
 r_sheet = rb.sheet_by_index(0)
 wb = copy(rb)
@@ -113,21 +109,7 @@ main_url = 'https://www.bahesab.ir/map/distance/'
 browser.get(main_url)
 start_time = time.time()
 row = 0
-for i in range(210, n):
-    if i == 239:
-        loc = loc2
-        rb = xlrd.open_workbook(loc, formatting_info=True)
-        r_sheet = rb.sheet_by_index(0)
-        wb = copy(rb)
-        sheet1 = wb.get_sheet(0)
-        row = 0
-    if i == 268:
-        loc = loc3
-        rb = xlrd.open_workbook(loc, formatting_info=True)
-        r_sheet = rb.sheet_by_index(0)
-        wb = copy(rb)
-        sheet1 = wb.get_sheet(0)
-        row = 0
+for i in range(o, n):
     print(i)
     elpased_time = time.time() - start_time
     start_time = time.time()
